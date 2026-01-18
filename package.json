@@ -17,3 +17,4 @@
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^13.5.0",
     "web-vitals"
+  }

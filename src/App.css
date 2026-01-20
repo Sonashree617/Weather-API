@@ -1,181 +1,38 @@
-/* 🌍 Global Styles */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1d2671, #c33764);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #222;
-}
-
-/* 🌦 Main Weather Container */
-.weather-container {
-  width: 100%;
-  max-width: 420px;
-  padding: 30px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+.App {
   text-align: center;
-  animation: fadeIn 0.8s ease-in-out;
 }
 
-/* ✨ Title */
-.weather-container h1 {
-  margin-bottom: 20px;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #1d2671;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-/* 🔍 Search Section */
-.search-box {
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.search-box input {
-  flex: 1;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  outline: none;
-  transition: border 0.3s;
-}
-
-.search-box input:focus {
-  border-color: #1d2671;
-}
-
-/* 🔘 Button */
-.search-box button {
-  padding: 12px 18px;
-  border-radius: 10px;
-  border: none;
-  background: linear-gradient(135deg, #1d2671, #c33764);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.search-box button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+.App-link {
+  color: #61dafb;
 }
 
-/* ❌ Error Message */
-.error {
-  color: #d63031;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-/* 🌡 Weather Card */
-.weather-card {
-  margin-top: 25px;
-  padding: 25px;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #eef2f3, #dfe9f3);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  animation: slideUp 0.6s ease;
-}
-
-.weather-card h2 {
-  margin: 0;
-  font-size: 1.4rem;
-  color: #1d2671;
-}
-
-/* 🌡 Temperature */
-.temp {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 10px 0;
-  color: #c33764;
-}
-
-/* 🌥 Description */
-.desc {
-  font-size: 1.1rem;
-  text-transform: capitalize;
-  color: #555;
-  margin-bottom: 8px;
-}
-
-/* 📱 MEDIA QUERIES */
-
-/* Mobile (small phones) */
-@media (max-width: 480px) {
-  .weather-container {
-    margin: 20px;
-    padding: 22px;
-  }
-
-  .weather-container h1 {
-    font-size: 1.8rem;
-  }
-
-  .search-box {
-    flex-direction: column;
-  }
-
-  .search-box button {
-    width: 100%;
-  }
-
-  .temp {
-    font-size: 2.5rem;
-  }
-}
-
-/* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-  .weather-container {
-    max-width: 500px;
-  }
-
-  .weather-container h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Large screens */
-@media (min-width: 1024px) {
-  .weather-container {
-    max-width: 450px;
-  }
-}
-
-/* 🎬 Animations */
-@keyframes fadeIn {
+@keyframes App-logo-spin {
   from {
-    opacity: 0;
-    transform: scale(0.95);
+    transform: rotate(0deg);
   }
   to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: rotate(360deg);
   }
 }
